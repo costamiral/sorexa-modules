@@ -1,0 +1,12 @@
+name: Sorexa Action Component Workflow
+description: ""
+
+runs:
+  using: "composite"
+  steps:
+    - name: Run
+      id: git
+      run: |
+        chmod +x ${{ github.action_path }}/bin/search_pull_request_action_component
+        ${{ github.action_path }}/bin/search_pull_request_action_component
+      shell: bash
